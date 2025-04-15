@@ -1,6 +1,6 @@
 #include <stdio.h>
 #define MAX_SIZE 100
-
+// lifo last in first out
 struct Stack
 {
     int arr[MAX_SIZE];
@@ -33,8 +33,10 @@ int main() {
     struct Stack s;
     init(&s);
     push(&s, 10);
+    push(&s, 10);
     push(&s, 20);
     push(&s, 30);
+    printf("Popped: %d\n", pop(&s));
     printf("Popped %d\n ", pop(&s));
     printf("Popped: %d\n", pop(&s));
     return 0;
